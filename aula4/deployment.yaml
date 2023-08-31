@@ -18,14 +18,3 @@ spec: # Especificações
           imagePullPolicy: IfNotPresent # Politica de uso da imagens, IfNotPresente, Never
           ports:
             - containerPort: 8080 # A porta liberada dentro do Cluster
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: postgres-config
-  labels:
-    app: postgres
-data:
-  POSTGRES_DB: postgresdb
-  POSTGRES_USER: postgresadmin
-  POSTGRES_PASSWORD: admin123
